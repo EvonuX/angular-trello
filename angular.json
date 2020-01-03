@@ -15,7 +15,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@netlify-builder/@deploy:deploy",
           "options": {
             "outputPath": "dist/ngtrello",
             "index": "src/index.html",
@@ -115,6 +115,14 @@
             "production": {
               "devServerTarget": "ngtrello:serve:production"
             }
+          }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/ngtrello",
+            "netlifyToken": "4db44d373875a29bdef6521f0635c2b07cf260cc4f6c1670bff181d8f812b8f9",
+            "siteId": "1d6bd70c-bcaa-46d7-acf5-6fa47038280e"
           }
         }
       }
