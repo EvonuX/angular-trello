@@ -15,7 +15,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@netlify-builder/deploy:deploy",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/ngtrello",
             "index": "src/index.html",
